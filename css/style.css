@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  background: #1d1d1d;
+  color: #ffffff;
+}
+
+body #wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+  height: 100vh;
+}
+
+body #wrap #left {
+  background: #131313;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #wrap #left #clock {
+  text-align: center;
+  font-size: 15rem;
+  letter-spacing: 2rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-weight: 900;
+  width: 225%;
+}
+
+body #wrap #right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+body #wrap #right .rightItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #wrap #right #text {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+body #wrap #right #data .dataItem {
+  font-size: 3rem;
+  padding: 2vh;
+  margin: 4vh;
+}
+
+body #wrap #right #data .dataSpan {
+  color: #474747;
+  font-weight: 900;
+}
+
+body #wrap #right #search input {
+  font-size: 2rem;
+  padding: 1vh;
+  width: 40%;
+}
+
+body #wrap #right #socials .social {
+  font-size: 3rem;
+  margin: 3vh;
+}
+
+body #wrap #right #socials .social a {
+  color: white;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+
+body #wrap #right #socials .social a:hover {
+  color: #b8b8b8;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
