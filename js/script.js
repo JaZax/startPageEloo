@@ -1,18 +1,18 @@
-const clock = document.getElementById('clock')
-const date  = document.getElementById('date')
-const temp  = document.getElementById('temp')
-const nick  = document.getElementById('text')
-
 window.onload = async() => {
+  const clock = document.getElementById('clock')
+  const date  = document.getElementById('date')
+  const temp  = document.getElementById('temp')
+  const nick  = document.getElementById('text')
+  const nickname = await localStorage.getItem('nick')
+  const api_key  = await localStorage.getItem('api-key')
+
   if (!localStorage.getItem('api-key') || !localStorage.getItem('nick')) {
     const api_key = await prompt('Please provide weather api key from: https://openweathermap.com/api')
     const nickname = await prompt('Please provide your nickname')
     localStorage.setItem('api-key', api_key)
     localStorage.setItem('nick', nickname)
+    location.reload()
   }
-
-  const nickname = await localStorage.getItem('nick')
-  const api_key  = await localStorage.getItem('api-key')
 
   updateWeather = () => {
     if (navigator.geolocation) {
