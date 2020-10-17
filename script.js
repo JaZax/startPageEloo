@@ -23,7 +23,7 @@ window.onload = async() => {
     nick.innerHTML = nick.innerHTML.replace(/\[nick\]/, config.nick)
   }
   updateDate = () => {
-    date.innerHTML = `${new Date().getDay()} <span class="dataSpan">${new Date().toString().split(' ')[1]}</span>`
+    date.innerHTML = `${new Date().toString().split(' ')[2]} <span class="dataSpan">${new Date().toString().split(' ')[1]}</span>`
   }
   updateClock()
   updateWeather()
