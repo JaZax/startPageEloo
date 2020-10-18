@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "ElooPage",
+  "version": "1.0",
+  "description": "ElooPage",
+  "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "permissions": [ "tabs", "geolocation" ]
+}
