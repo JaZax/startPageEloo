@@ -19,7 +19,7 @@ window.onload = async() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(pos => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=${api_key}`).then(res => res.json()).then(json => {
-          temp.innerHTML = `${Math.floor(((json.main.temp-273.15) * 9/5) + 32)}<span class="dataSpan">°C</span>`
+          temp.innerHTML = `${Math.floor(((((json.main.temp-273.15) * 9/5) + 32) - 32) * 5/9)}<span class="dataSpan">°C</span>`
         })
       });
     } else {
